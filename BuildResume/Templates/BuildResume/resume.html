@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor={{design.bgcol}} style="font-family:{{design.font}}, {{design.gen_font}};">
+    <table border=0 width="50%" bgcolor={{design.rescol}} cellpadding="10px" cellspacing="1px" style="border:{{design.border_type}}; border-color: black; border-radius: 10px;" align="center">
+        <tr><td width="50%" colaspn="2"><b>{{ data.name }}</b></td></tr>
+        <tr><td colspan="2"><b>{{data.email}}</b></td></tr>
+        <tr><td colspan="2"><b>{{data.phone}}</b></td></tr>
+        <tr><td colspan="2"><b>About Me</b></td></tr>
+        <tr><td colspan="2">{{data.about}}</td></tr>
+        {% if data.skills != "" %}
+            <tr><td colspan="2"><b>Skills</b></td></tr>
+            {% for item in data.skills %}
+                <tr><td>{{item.0}}</td><td>{{item.1}}</td></tr>
+            {% endfor %}
+        {% endif %}
+        {% if data.portfolio != "" %}
+            <tr><td><b>Protfolio</b></td><td>{{ data.portfolio }}</td></tr>
+        {% endif %}
+        <tr><td><b>Github Profile</b></td><td>{{data.github}}</td></tr>
+        <tr><td><b>Linkedik Profile</b></td><td>{{data.linkedin}}</td></tr>
+        <tr><td colspan="2"><b>Educaion Qualification</b></td></tr>
+        <tr><td><b>10th</b></td><td>{{data.tenth.0}}</td></tr>
+        <tr><td>Year of pass out</td><td>{{data.tenth.1}}</td></tr>
+        <tr><td>Percentage Score</td><td>{{data.tenth.2}}</td></tr>
+        <tr><td><b>12th</b></td><td>{{data.inter.0}}</td></tr>
+        <tr><td>Year of pass out</td><td>{{data.inter.1}}</td></tr>
+        <tr><td>Percentage Score</td><td>{{data.inter.2}}</td></tr>
+        <tr><td><b>B.Tech</b></td><td>{{data.btech.0}}</td></tr>
+        <tr><td>Year of pass out</td><td>{{data.btech.1}}</td></tr>
+        <tr><td>Percentage Score</td><td>{{data.btech.2}}</td></tr>
+        {% if data.project != "" %}
+            <tr><td colspan="2"><b>Projects</b></td></tr>
+            {% for item in data.project %}
+                <tr><td colspan="2">{{item.0}} using {{item.1}}</td></tr>
+            {% endfor %}
+        {% endif %}
+        {% if data.exp != "" %}
+            <tr><td colspan="2"><b>Experience</b></td></tr>
+            {% for item in data.exp %}
+                <tr><td colspan="2">Worked as {{item}}</td></tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+</body>
+</html>

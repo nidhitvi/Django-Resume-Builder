@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+</head>
+<body bgcolor="skyblue">
+<form action="/design/" method="get" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table border=0 cellpadding="10px" cellspacing="20px" style="background-color: whitesmoke; border: double; border-color: black; border-radius: 10px;" align="center">
+        <tr><td>First Name</td><td><input type="text" name="fname" required></td></tr>
+        <tr><td>Last Name</td><td><input type="text" name="lname" required></td></tr>
+        <tr><td>Gender</td><td><input type="radio" name="gender">Male<input type="radio" name="gender">Female</td></tr>
+        <tr><td>Date Of Birth</td><td><input type="date" name="dob" required></td></tr>
+        <tr><td>Email</td><td><input type="email" name="mail" required></td></tr>
+        <tr><td>Phone Number</td><td><input type="number" name="phone" required></td></tr>
+        <tr><td>Portfolio</td><td><input type="text" name="portfolio"></td></tr>
+        <tr><td>Github Profile</td><td><input type="text" name="github" required></td></tr>
+        <tr><td>Linkedin Profile</td><td><input type="text" name="linkedin" required></td></tr>
+        <tr><td>Skills</td><td><textarea rows="7" cols="23" name="skills" placeholder="skill1               skill2              skill3"></textarea></td></tr>
+        <tr><td>About You</td><td><textarea rows="7" cols="23" name="about"></textarea></td></tr>
+        <tr><td colspan="2">Education Details</td></tr>
+        <tr><td>10th school </td><td><input type="text" name="school"></td></tr>
+        <tr><td>Year of Passout</td><td><input type="number" name="10pass"></td></tr>
+        <tr><td>Percentage Score</td><td><input type="number" name="10score"></td></tr>
+        <tr><td>Inter(12th) college</td><td><input type="text" name="inter"></td></tr>
+        <tr><td>Year of Passout</td><td><input type="number" name="12pass"></td></tr>
+        <tr><td>Percentage Score</td><td><input type="number" name="12score"></td></tr>
+        <tr><td>B Tech College </td><td><input type="text" name="btech"></td></tr>
+        <tr><td>Year of Passout</td><td><input type="number" name="btechpass"></td></tr>
+        <tr><td>Percentage Score</td><td><input type="number" name="btechscore"></td></tr>
+        <tr><td>Experience</td><td><textarea rows="7" cols="23" name="exp" placeholder="Eg: Databse Engineer at Microsoft from 2015 to 2020"></textarea></td></tr>
+        <tr><td>Projects</td><td><textarea rows="7" cols="23" name="project" placeholder="Eg:webpage - html, css"></textarea></td></tr>
+        <tr><td colspan="2" align="right"><input type="submit"></td></tr>
+        </table>
+</form>
+</body>
+</html>
